@@ -1,5 +1,4 @@
-// 23.03.26 2분 소요
-// 4시 55분 시작
+// https://school.programmers.co.kr/learn/courses/30/lessons/120836
 
 // 22.03.26 해결 못함
 class Solution {
