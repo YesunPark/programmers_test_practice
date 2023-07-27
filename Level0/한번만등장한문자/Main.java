@@ -1,10 +1,13 @@
 package Level0.한번만등장한문자;
+// https://school.programmers.co.kr/learn/courses/30/lessons/120896
+// 23.03.28
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 
-class Solution1 {
+class Solution {
+
     public String solution(String s) {
         StringBuilder answer = new StringBuilder();
         HashMap<String, Integer> hm = new HashMap<>();
@@ -19,8 +22,9 @@ class Solution1 {
         }
 
         hm.forEach((key, value) -> {
-            if (value == 1)
+            if (value == 1) {
                 arrayList.add(key);
+            }
         });
 
         int[] numList = new int[arrayList.size()];
@@ -37,9 +41,10 @@ class Solution1 {
     }
 }
 
-public class 한번만_등장한_문자 {
+public class Main {
+
     public static void main(String[] args) {
-        Solution1 s = new Solution1();
+        Solution s = new Solution();
         System.out.println(s.solution("aabhtycccccrrrc"));
     }
 }
