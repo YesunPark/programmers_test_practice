@@ -11,13 +11,12 @@ class Solution {
         int lastSection = 0;
 
         for (int i = 0; i < section.length; i++) {
-            // 현재 칠해야 하는 구역이 lastSection 보다 같거나 작다면 패스
-            if (section[i] <= lastSection) {
-                continue;
+            // 현재 칠해야 하는 구역이 lastSection 보다 크면 횟수+
+            if (section[i] > lastSection) {
+                startSection = section[i];
+                lastSection = startSection + m - 1;
+                answer++;
             }
-            startSection = section[i];
-            lastSection = startSection + m - 1;
-            answer++;
         }
 
         return answer;
