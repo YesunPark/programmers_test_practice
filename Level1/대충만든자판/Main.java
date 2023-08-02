@@ -18,9 +18,8 @@ class Solution {
             for (int j = 0; j < key.length(); j++) {
                 String str = key.split("")[j];
 
-                if (map.get(str) == null) { // 맵에 문자에 해당되는 정보가 없을 때
-                    map.put(str, j + 1);
-                } else if (map.get(str) != null && map.get(str) > j + 1) {
+                if (map.get(str) == null ||(map.get(str) != null && map.get(str) > j + 1)) {
+                    // 맵에 문자에 해당되는 정보가 없거나,
                     // 문자에 해당되는 정보가 있고, 현재 누르는 횟수가 더 작을 때
                     map.put(str, j + 1);
                 }
