@@ -7,7 +7,7 @@ class Solution {
     public int solution(int n) {
         int answer = Integer.MAX_VALUE;
 
-        for (int x = n - 1; x > 0; x--) {
+        for (int x = 2; x < n; x++) {
             if (n % x == 1 && x < answer) {
                 answer = x;
             }
