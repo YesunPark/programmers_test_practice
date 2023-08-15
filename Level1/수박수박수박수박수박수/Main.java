@@ -6,13 +6,12 @@ class Solution {
 
     public String solution(int n) {
         StringBuilder answer = new StringBuilder();
-        StringBuilder repeat = new StringBuilder();
 
         for (int i = 1; i <= n; i++) {
             if (i % 2 == 0) {
-                repeat.append("박");
+                answer.append("박");
             } else {
-                repeat.append("수");
+                answer.append("수");
             }
         }
 
